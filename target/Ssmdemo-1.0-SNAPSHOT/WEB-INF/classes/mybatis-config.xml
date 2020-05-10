@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTDConfig3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+    <mappers>
+        <!--        <mapper class="cn.itcast.dao.AccountDao"/>-->
+        <package name="cn.itcast.dao"/>
+    </mappers>
+
+</configuration>
