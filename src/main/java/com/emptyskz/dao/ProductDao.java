@@ -1,6 +1,7 @@
 package com.emptyskz.dao;
 
 import com.emptyskz.pojo.Product;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
@@ -11,4 +12,8 @@ public interface ProductDao {
     //查询所有的的产品信息
     @Select("select * from product")
     public List<Product> findAll();
+
+    @Insert("Insert into product (productNum,productName,cityName,departureTime,productPrice,productDesc,productStatus) " +
+            "values (#{productNum},#{productName},#{cityName},#{departureTime},#{productPrice},#{productDesc},#{productStatus})")
+    public void save(Product product);
 }

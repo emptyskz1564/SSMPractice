@@ -4,6 +4,8 @@ package com.emptyskz.pojo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.lang.Nullable;
 
 import java.util.Date;
 
@@ -15,7 +17,8 @@ public class Product {
     private String productNum;
     private String productName;
     private String cityName;
-    private Date DepartureTime;
+    @Nullable
+    private Date departureTime;
     private Float productPrice;
     private String productDesc;
     private Boolean productStatus;

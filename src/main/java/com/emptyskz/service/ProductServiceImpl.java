@@ -18,4 +18,8 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> findAll() {
         return productDao.findAll();
     }
+
+    public void save(Product product) {
+        productDao.save(product);
+    }
 }
