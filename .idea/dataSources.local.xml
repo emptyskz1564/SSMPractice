@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="ssmdemo" uuid="e9b85b77-87fc-4208-9938-0e0634d0841e">
+    <data-source name="ssmdemo" uuid="61224da8-9114-464d-b2b7-6e4900d127a0">
       <database-info product="MySQL" version="5.7.17" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.15 (Revision: 79a4336f140499bd22dd07f02b708e163844e3d5)" dbms="MYSQL" exact-version="5.7.17" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
@@ -9,12 +9,7 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <introspection-schemas>*:new_schema</introspection-schemas>
-    </data-source>
-    <data-source name="dataSource" uuid="724572ef-aa61-4c91-acbc-8e285559347f">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
-      <user-name>root</user-name>
-      <introspection-schemas>*:</introspection-schemas>
+      <introspection-schemas>*:ssmdemo</introspection-schemas>
     </data-source>
   </component>
 </project>
