@@ -13,6 +13,10 @@ public interface ProductDao {
     @Select("select * from product")
     public List<Product> findAll();
 
+    //通过id查找产品
+    @Select("select * from product where id = #{id}")
+    public Product findById(Integer id);
+
     @Insert("Insert into product (productNum,productName,cityName,departureTime,productPrice,productDesc,productStatus) " +
             "values (#{productNum},#{productName},#{cityName},#{departureTime},#{productPrice},#{productDesc},#{productStatus})")
     public void save(Product product);

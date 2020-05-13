@@ -3,12 +3,8 @@ package com.emptyskz.controller;
 
 import com.emptyskz.pojo.Product;
 import com.emptyskz.service.ProductService;
-import com.emptyskz.service.ProductServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 

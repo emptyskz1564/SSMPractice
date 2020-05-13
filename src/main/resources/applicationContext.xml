@@ -40,6 +40,18 @@
         <!--绑定Mybatis配置文件-->
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
         <!--                <property name="mapperLocations" value="classpath:cn/itcast/mappers/*.xml"/>-->
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <props>
+                            <prop key="helperDialect">mysql</prop>
+                            <prop key="reasonable">true</prop>
+                        </props>
+                    </property>
+                </bean>
+            </array>
+        </property>
     </bean>
 
     <!--配置AccountDao接口所在的包-->
