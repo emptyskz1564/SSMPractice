@@ -11,4 +11,6 @@ public interface ProductService {
 
     //添加产品
     void save(Product product);
+
+    Product findById(Integer id);
 }

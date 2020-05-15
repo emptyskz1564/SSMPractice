@@ -7,6 +7,10 @@ import java.util.List;
 public interface OrdersService {
 
     //插叙所有的订单
-    public List<Orders> findAll(int page,int size);
+//    public List<Orders> findAll(int page,int size);
 
+    //插叙所有的订单
+    public List<Orders> findAll();
+
+    Orders findById(int id);
 }

@@ -20,18 +20,38 @@ public class OrdersController {
     private OrdersService ordersService;
 
     @RequestMapping("/findAll")
-    public ModelAndView findAll(
-            @RequestParam(name="page",required = true,defaultValue = "1" ) int page ,
-            @RequestParam(name = "size" ,required = true,defaultValue = "4") int size
-    ){
+    public ModelAndView findAll(){
         ModelAndView modelAndView = new ModelAndView();
-        List<Orders> all = ordersService.findAll(page,size);
-        PageInfo pageInfo = new PageInfo<Orders>(all);
-        System.out.println(pageInfo);
-        modelAndView.addObject("pageInfo",pageInfo);
-        modelAndView.setViewName("orders-page-list");
+        List<Orders> all = ordersService.findAll();
+        modelAndView.addObject("ordersList",all);
+        modelAndView.setViewName("orders-list");
 
         return modelAndView;
+    }
+
+//    @RequestMapping("/findAll")
+//    public ModelAndView findAll(
+//            @RequestParam(name="page",required = true,defaultValue = "1" ) int page ,
+//            @RequestParam(name = "size" ,required = true,defaultValue = "4") int size
+//    ){
+//        ModelAndView modelAndView = new ModelAndView();
+//        List<Orders> all = ordersService.findAll(page,size);
+//        PageInfo pageInfo = new PageInfo<Orders>(all);
+//        System.out.println(pageInfo);
+//        modelAndView.addObject("pageInfo",pageInfo);
+//        modelAndView.setViewName("orders-page-list");
+//
+//        return modelAndView;
+//    }
+
+    @RequestMapping("/findById")
+    public ModelAndView findById(@RequestParam(name = "id",required = true) Integer id){
+        ModelAndView modelAndView = new ModelAndView();
+        Orders byId = ordersService.findById(id);
+        System.out.println(byId);
+        modelAndView.addObject("orders",byId);
+        modelAndView.setViewName("orders-show");
+        return null;
     }
 
 }

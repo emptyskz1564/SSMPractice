@@ -18,8 +18,15 @@ public class OrderServcieImpl implements OrdersService {
     private OrdersDao ordersDao;
 
 
-    public List<Orders> findAll(int page ,int size ) {
-        PageHelper.startPage(page,size);
+//    public List<Orders> findAll(int page ,int size ) {
+//        PageHelper.startPage(page,size);
+//        return ordersDao.findAll();
+//    }
+    public List<Orders> findAll() {
         return ordersDao.findAll();
+    }
+
+    public Orders findById(int id) {
+        return ordersDao.findById(id);
     }
 }

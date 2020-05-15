@@ -215,8 +215,10 @@
 							</div>
 							<div class="box-tools pull-right">
 								<div class="has-feedback">
-									<input type="text" class="form-control input-sm"
-										placeholder="搜索"> <span
+									<label>
+										<input type="text" class="form-control input-sm"
+											placeholder="搜索">
+									</label> <span
 										class="glyphicon glyphicon-search form-control-feedback"></span>
 								</div>
 							</div>
@@ -227,7 +229,7 @@
 								class="table table-bordered table-striped table-hover dataTable">
 								<thead>
 									<tr>
-										<th class="" style="padding-right: 0px;"><input
+										<th class="" style="padding-right: 0;"><label for="selall"></label><input
 											id="selall" type="checkbox" class="icheckbox_square-blue">
 										</th>
 										<th class="sorting_asc">ID</th>
